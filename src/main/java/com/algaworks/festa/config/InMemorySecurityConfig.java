@@ -11,11 +11,11 @@ public class InMemorySecurityConfig {
 	public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
 		builder
 			.inMemoryAuthentication()
-			.withUser("joao").password("123").roles("USER")
+			.withUser("joao").password("{noop}123").roles("USER")
 			.and()
-			.withUser("alexandre").password("123").roles("USER")
+			.withUser("alexandre").password("{noop}123").roles("USER")
 			.and()
-			.withUser("thiago").password("123").roles("USER");
+			.withUser("thiago").password("{noop}123").roles("USER");
 	}
 
 }
